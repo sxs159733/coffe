@@ -1342,6 +1342,20 @@ h1 { margin: 0; }
   color: color-mix(in srgb, var(--site-bg) 62%, transparent);
 }
 
+.foot-update {
+  grid-column: 1 / -1;
+  margin: 14px 0 0;
+  font-size: calc(13px * var(--type-scale, 1));
+  color: color-mix(in srgb, var(--site-bg) 66%, transparent);
+}
+.foot-copy {
+  grid-column: 1 / -1;
+  margin: 6px 0 0;
+  font-size: calc(13px * var(--type-scale, 1));
+  color: color-mix(in srgb, var(--site-bg) 72%, transparent);
+}
+.foot-copy a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+
 /* ── Recipe dialog ──────────────────────────── */
 
 dialog { color: var(--site-fg); }
