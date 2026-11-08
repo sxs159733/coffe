@@ -7,11 +7,13 @@
   --site-bg: #f5eee3;
   --site-fg: #241812;
   --site-surface: #fffbf3;
-  --site-muted: #7b6a5a;
+  /* 原 #7b6a5a 对底色仅 4.50:1（临界），加深至 6.72:1，留足 AA 余量 */
+  --site-muted: #5f5042;
   --site-border: #e4d7c5;
-  --site-accent: #b4552a;
+  /* 原 #b4552a 作小标签文字色仅 4.26:1，不达 AA；加深至 5.63:1（surface 6.29:1） */
+  --site-accent: #9c431d;
   --site-on-accent: #fff8ef;
-  --site-font: "PingFang SC", "HarmonyOS Sans SC", "Noto Sans SC", "Noto Sans CJK SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
+  --site-font: "PingFang SC", "HarmonyOS Sans SC", "Noto Sans SC", "Noto Sans CJK SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, system-ui, sans-serif;
   --site-radius: 18px;
   --site-space: 1;
   --type-scale: 1.14;      /* 全站字号统一倍率：改这里即可整体缩放 */
@@ -939,7 +941,7 @@ h1 { margin: 0; }
   outline: none;
   font-size: calc(14.5px * var(--type-scale, 1));
 }
-.search input::placeholder { color: color-mix(in srgb, var(--site-muted) 75%, transparent); }
+.search input::placeholder { color: var(--site-muted); }
 .search input::-webkit-search-cancel-button { cursor: pointer; }
 
 .toolbar-right { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
@@ -1142,7 +1144,7 @@ h1 { margin: 0; }
   margin-left: auto;
   font-family: var(--mono);
   font-size: calc(10px * var(--type-scale, 1));
-  color: color-mix(in srgb, var(--site-muted) 60%, transparent);
+  color: var(--site-muted);
   letter-spacing: 0.08em;
 }
 .card-temp {
@@ -1165,7 +1167,7 @@ h1 { margin: 0; }
   background: color-mix(in srgb, var(--site-surface) 82%, transparent);
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
-  color: color-mix(in srgb, var(--site-muted) 85%, transparent);
+  color: var(--site-muted);
   font-size: calc(16px * var(--type-scale, 1));
   line-height: 1;
   display: grid;
@@ -1206,7 +1208,7 @@ h1 { margin: 0; }
   border-top: 1px dashed var(--site-border);
   font-size: calc(12px * var(--type-scale, 1));
   letter-spacing: 0.02em;
-  color: color-mix(in srgb, var(--site-muted) 88%, transparent);
+  color: var(--site-muted);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1337,8 +1339,22 @@ h1 { margin: 0; }
   border-top: 1px solid color-mix(in srgb, var(--site-bg) 14%, transparent);
   font-size: calc(12.5px * var(--type-scale, 1));
   line-height: 1.85;
-  color: color-mix(in srgb, var(--site-bg) 48%, transparent);
+  color: color-mix(in srgb, var(--site-bg) 62%, transparent);
 }
+
+.foot-update {
+  grid-column: 1 / -1;
+  margin: 14px 0 0;
+  font-size: calc(13px * var(--type-scale, 1));
+  color: color-mix(in srgb, var(--site-bg) 66%, transparent);
+}
+.foot-copy {
+  grid-column: 1 / -1;
+  margin: 6px 0 0;
+  font-size: calc(13px * var(--type-scale, 1));
+  color: color-mix(in srgb, var(--site-bg) 72%, transparent);
+}
+.foot-copy a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
 
 /* ── Recipe dialog ──────────────────────────── */
 
