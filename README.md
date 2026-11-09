@@ -2,15 +2,15 @@
 
 一个纯静态（HTML + CSS + JavaScript，无需构建）的咖啡配方站点，配方以胶囊咖啡机为基准，共 99 款。
 
-在线站点（GitHub Pages）：https://sxs159733.github.io/coffee-atlas/
+在线站点（GitHub Pages）：https://sxs159733.github.io/coffe/
 
 仓库为公开仓库，任何有写权限的协作者都可以直接 clone、修改、推送；推送 `main` 后由 GitHub Actions 自动发布。
 
 ## 本地预览
 
 ```
-git clone https://github.com/sxs159733/coffee-atlas.git
-cd coffee-atlas
+git clone https://github.com/sxs159733/coffe.git
+cd coffe
 python -m http.server 8000        # 浏览器打开 http://127.0.0.1:8000
 ```
 
