@@ -90,7 +90,7 @@
   color: var(--site-muted);
 }
 
-/* ── 引言区：图 + 阅读引导 ────────────────────── */
+/* ── 引言区：图 + 阅读引导 ───────────────────── */
 
 .atlas-intro {
   display: grid;
@@ -138,7 +138,7 @@
   padding-top: 3px;
 }
 
-/* ── 区块标题 ──────────────────────────────── */
+/* ── 区块标题 ───────────────────────────────── */
 
 .atlas-block { margin-top: calc(64px * var(--site-space)); }
 .atlas-block-head {
@@ -159,7 +159,7 @@
   color: var(--site-muted);
 }
 
-/* ── 种类：概览图 + 三张说明卡 ────────────── */
+/* ── 种类：概览图 + 三张说明卡 ───────────────── */
 
 .atlas-species {
   display: grid;
@@ -227,7 +227,7 @@
 }
 .atlas-facts li b { color: var(--site-accent); font-weight: 600; }
 
-/* ── 产地：地形意象图 + 三个产区 ────────────── */
+/* ── 产地：地形意象图 + 三个产区 ─────────────── */
 
 .atlas-origin {
   display: grid;
@@ -269,7 +269,7 @@
   color: var(--ink-soft);
 }
 
-/* ── 步骤：四阶段 ────────────── */
+/* ── 步骤：四阶段 ───────────────────────────── */
 
 .atlas-steps {
   display: grid;
@@ -330,7 +330,7 @@
 }
 .atlas-step .atlas-why { margin-top: auto; padding-top: 10px; }
 
-/* ── 历史：时间轴图 + 节点说明 ────────────── */
+/* ── 历史：时间轴图 + 节点说明 ───────────────── */
 
 .atlas-timeline {
   display: grid;
@@ -381,7 +381,7 @@
   color: var(--site-muted);
 }
 
-/* ── 提示与注意事项 ─────────────── */
+/* ── 提示与注意事项 ─────────────────────────── */
 
 .atlas-tips {
   display: grid;
@@ -452,7 +452,7 @@
 .f-media img { object-position: center 52%; }
 .step-media img, .checklist-media img { object-position: center 52%; }
 
-/* ── Responsive ────────────────────── */
+/* ── Responsive ─────────────────────────────── */
 
 @media (max-width: 1040px) {
   .atlas-intro { grid-template-columns: 1fr; gap: 26px; }
