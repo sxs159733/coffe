@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img">
+  <defs>
+    <pattern id="grain" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="0.8" fill="#241812" opacity=".055"/></pattern>
+  </defs>
+  <rect width="800" height="500" fill="#F5EEE3"/>
+  <rect width="800" height="500" fill="url(#grain)"/>
+  <rect x="22" y="22" width="756" height="456" rx="18" fill="none" stroke="#E4D7C5" stroke-width="1.5"/>
+  <circle cx="754" cy="46" r="4.5" fill="#B4552A"/>
+  <text x="48" y="60" font-family="monospace" font-size="13" letter-spacing="3" fill="#7B6A5A">STEP 04 / ROASTING DECIDES THE CUP</text>
+  <line x1="48" y1="76" x2="752" y2="76" stroke="#E4D7C5" stroke-width="1.5"/>
+
+  <!-- drum -->
+  <g transform="translate(190 238)">
+    <circle r="92" fill="#FFFCF6" stroke="#5E4B3C" stroke-width="3"/>
+    <circle r="70" fill="none" stroke="#E4D7C5" stroke-width="2"/>
+    <circle r="18" fill="#8A5A34"/>
+    <g stroke="#A9795B" stroke-width="2.5" stroke-linecap="round">
+      <line x1="-52" y1="-52" x2="-36" y2="-36"/><line x1="52" y1="-52" x2="36" y2="-36"/>
+      <line x1="-52" y1="52" x2="-36" y2="36"/><line x1="52" y1="52" x2="36" y2="36"/>
+    </g>
+    <g fill="#8A5A34">
+      <ellipse cx="-30" cy="26" rx="11" ry="15"/><ellipse cx="0" cy="36" rx="11" ry="15"/><ellipse cx="30" cy="26" rx="11" ry="15"/>
+    </g>
+  </g>
+  <!-- flame -->
+  <g transform="translate(190 366)" fill="#B4552A">
+    <path d="M-30 22 C-36 -2 -12 -10 -16 -30 C2 -18 6 -6 2 -2 C14 -10 16 -22 12 -32 C34 -14 34 6 24 22 Z" opacity=".85"/>
+    <path d="M-8 22 C-14 6 0 0 -2 -12 C8 -4 10 6 8 22 Z" fill="#C99A4E"/>
+  </g>
+
+  <!-- roast curve -->
+  <g transform="translate(340 100)">
+    <rect x="0" y="0" width="412" height="238" rx="14" fill="#FFFCF6" stroke="#E4D7C5" stroke-width="1.5"/>
+    <line x1="36" y1="196" x2="384" y2="196" stroke="#E4D7C5" stroke-width="2"/>
+    <line x1="36" y1="40" x2="36" y2="196" stroke="#E4D7C5" stroke-width="2"/>
+    <path d="M36 186 C110 176 150 148 206 108 C258 72 320 52 384 42" fill="none" stroke="#B4552A" stroke-width="3.5" stroke-linecap="round"/>
+    <g fill="#B4552A">
+      <circle cx="206" cy="108" r="5"/><circle cx="320" cy="52" r="5"/>
+    </g>
+    <g font-family="monospace" font-size="11" letter-spacing="1.5" fill="#7B6A5A">
+      <text x="190" y="228">TIME</text>
+      <text x="44" y="34">TEMP</text>
+    </g>
+  </g>
+
+  <!-- colour scale -->
+  <g transform="translate(340 356)">
+    <text x="0" y="-14" font-family="monospace" font-size="12" letter-spacing="2" fill="#7B6A5A">LIGHT → DARK</text>
+    <g stroke-width="2">
+      <g transform="translate(24 24)"><ellipse rx="17" ry="23" transform="rotate(-14)" fill="#D9B98C" stroke="#A9795B"/></g>
+      <g transform="translate(102 24)"><ellipse rx="17" ry="23" transform="rotate(-14)" fill="#C9A177" stroke="#8A5A34"/></g>
+      <g transform="translate(180 24)"><ellipse rx="17" ry="23" transform="rotate(-14)" fill="#A9743F" stroke="#6B3E1E"/></g>
+      <g transform="translate(258 24)"><ellipse rx="17" ry="23" transform="rotate(-14)" fill="#7A4A22" stroke="#4A2C16"/></g>
+      <g transform="translate(336 24)"><ellipse rx="17" ry="23" transform="rotate(-14)" fill="#3D2212" stroke="#241812"/></g>
+    </g>
+    <line x1="8" y1="62" x2="372" y2="62" stroke="#E4D7C5" stroke-width="2"/>
+  </g>
+
+  <text x="48" y="452" font-family="monospace" font-size="12" letter-spacing="2" fill="#7B6A5A">FLORAL → CARAMEL → BITTERSWEET</text>
+</svg>

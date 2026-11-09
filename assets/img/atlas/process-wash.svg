@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img">
+  <defs>
+    <pattern id="grain" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="0.8" fill="#241812" opacity=".055"/></pattern>
+  </defs>
+  <rect width="800" height="500" fill="#F5EEE3"/>
+  <rect width="800" height="500" fill="url(#grain)"/>
+  <rect x="22" y="22" width="756" height="456" rx="18" fill="none" stroke="#E4D7C5" stroke-width="1.5"/>
+  <circle cx="754" cy="46" r="4.5" fill="#B4552A"/>
+  <text x="48" y="60" font-family="monospace" font-size="13" letter-spacing="3" fill="#7B6A5A">STEP 02 / NATURAL OR WASHED</text>
+  <line x1="48" y1="76" x2="752" y2="76" stroke="#E4D7C5" stroke-width="1.5"/>
+
+  <!-- left: natural / sun drying bed -->
+  <g transform="translate(48 100)">
+    <rect x="0" y="0" width="330" height="330" rx="14" fill="#FFFCF6" stroke="#E4D7C5" stroke-width="1.5"/>
+    <circle cx="265" cy="66" r="26" fill="#C99A4E" opacity=".6"/>
+    <g stroke="#C99A4E" stroke-width="2.5" stroke-linecap="round" opacity=".8">
+      <line x1="265" y1="20" x2="265" y2="32"/><line x1="265" y1="100" x2="265" y2="112"/>
+      <line x1="219" y1="66" x2="231" y2="66"/><line x1="299" y1="66" x2="311" y2="66"/>
+      <line x1="232" y1="33" x2="240" y2="41"/><line x1="290" y1="91" x2="298" y2="99"/>
+    </g>
+    <path d="M28 150 H302 L286 274 H44 Z" fill="#EFE0CB" stroke="#8A5A34" stroke-width="2.5" stroke-linejoin="round"/>
+    <g fill="#B4552A" stroke="#8A3A18" stroke-width="1.5">
+      <circle cx="72" cy="176" r="11"/><circle cx="112" cy="184" r="10"/><circle cx="152" cy="174" r="11"/>
+      <circle cx="192" cy="186" r="10"/><circle cx="232" cy="176" r="11"/><circle cx="268" cy="188" r="10"/>
+      <circle cx="92" cy="212" r="10"/><circle cx="132" cy="220" r="11"/><circle cx="172" cy="210" r="10"/>
+      <circle cx="212" cy="222" r="11"/><circle cx="250" cy="212" r="10"/>
+      <circle cx="70" cy="246" r="11"/><circle cx="110" cy="252" r="10"/><circle cx="150" cy="244" r="11"/>
+      <circle cx="190" cy="254" r="10"/><circle cx="230" cy="246" r="11"/>
+    </g>
+    <text x="24" y="306" font-family="monospace" font-size="13" letter-spacing="2" fill="#5E4B3C">NATURAL / FRUITY</text>
+  </g>
+
+  <!-- right: washed / water tank -->
+  <g transform="translate(422 100)">
+    <rect x="0" y="0" width="330" height="330" rx="14" fill="#FFFCF6" stroke="#E4D7C5" stroke-width="1.5"/>
+    <path d="M28 148 H302 L292 274 H38 Z" fill="#DCE7E3" stroke="#8A5A34" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M28 148 H302" stroke="#7B6A5A" stroke-width="5"/>
+    <g fill="none" stroke="#A9795B" stroke-width="2.5" stroke-linecap="round" opacity=".8">
+      <path d="M56 178 C76 188 96 168 116 178 C136 188 156 168 176 178 C196 188 216 168 236 178 C256 188 272 172 284 178"/>
+      <path d="M50 204 C70 214 90 194 110 204 C130 214 150 194 170 204 C190 214 210 194 230 204 C250 214 270 198 286 204"/>
+      <path d="M46 232 C66 242 86 222 106 232 C126 242 146 222 166 232 C186 242 206 222 226 232 C246 242 266 226 288 232"/>
+    </g>
+    <g fill="#B4552A" stroke="#8A3A18" stroke-width="1.5">
+      <ellipse cx="92" cy="248" rx="10" ry="7"/><ellipse cx="146" cy="256" rx="10" ry="7"/>
+      <ellipse cx="202" cy="246" rx="10" ry="7"/><ellipse cx="252" cy="256" rx="10" ry="7"/>
+    </g>
+    <g fill="none" stroke="#B4552A" stroke-width="2.5" stroke-linecap="round">
+      <path d="M164 92 C150 112 150 122 164 122 C178 122 178 112 164 92Z"/>
+      <path d="M212 108 C202 122 202 130 212 130 C222 130 222 122 212 108Z"/>
+    </g>
+    <text x="24" y="306" font-family="monospace" font-size="13" letter-spacing="2" fill="#5E4B3C">WASHED / CLEAN</text>
+  </g>
+
+  <line x1="400" y1="116" x2="400" y2="414" stroke="#E4D7C5" stroke-width="1.5" stroke-dasharray="6 8"/>
+  <text x="48" y="452" font-family="monospace" font-size="12" letter-spacing="2" fill="#7B6A5A">SAME CHERRY / TWO FLAVOUR PATHS</text>
+</svg>

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img">
+  <defs>
+    <pattern id="grain" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="0.8" fill="#241812" opacity=".055"/></pattern>
+  </defs>
+  <rect width="800" height="500" fill="#F5EEE3"/>
+  <rect width="800" height="500" fill="url(#grain)"/>
+  <rect x="22" y="22" width="756" height="456" rx="18" fill="none" stroke="#E4D7C5" stroke-width="1.5"/>
+  <circle cx="754" cy="46" r="4.5" fill="#B4552A"/>
+  <text x="48" y="60" font-family="monospace" font-size="13" letter-spacing="3" fill="#7B6A5A">FROM CHERRY TO CUP</text>
+  <line x1="48" y1="76" x2="752" y2="76" stroke="#E4D7C5" stroke-width="1.5"/>
+
+  <!-- stage 1: coffee cherry -->
+  <g transform="translate(140 250)">
+    <circle r="70" fill="#FFFCF6" stroke="#E4D7C5" stroke-width="1.5"/>
+    <path d="M0 -62 C-4 -78 6 -86 16 -90" fill="none" stroke="#5E4B3C" stroke-width="3" stroke-linecap="round"/>
+    <path d="M16 -90 C30 -96 38 -86 30 -78 C24 -72 14 -76 16 -90Z" fill="#8A5A34" opacity=".75"/>
+    <circle r="48" fill="#B4552A"/>
+    <circle r="48" fill="none" stroke="#8A3A18" stroke-width="2"/>
+    <ellipse cx="-15" cy="0" rx="15" ry="27" transform="rotate(-14 -15 0)" fill="#E8CFA9"/>
+    <ellipse cx="15" cy="0" rx="15" ry="27" transform="rotate(14 15 0)" fill="#E8CFA9"/>
+    <path d="M-15 -22 C-5 -8 -22 8 -12 22" fill="none" stroke="#B4552A" stroke-width="2.5"/>
+    <path d="M15 -22 C25 -8 8 8 18 22" fill="none" stroke="#B4552A" stroke-width="2.5"/>
+  </g>
+
+  <!-- stage 2: green bean -->
+  <g transform="translate(310 250)">
+    <circle r="70" fill="#FFFCF6" stroke="#E4D7C5" stroke-width="1.5"/>
+    <ellipse rx="34" ry="48" transform="rotate(-16)" fill="#D9B98C" stroke="#B98A54" stroke-width="2"/>
+    <path d="M-8 -40 C10 -18 -16 4 2 40" fill="none" stroke="#A9795B" stroke-width="3" stroke-linecap="round"/>
+    <path d="M-40 52 C-14 62 14 62 40 52" fill="none" stroke="#E4D7C5" stroke-width="2"/>
+  </g>
+
+  <!-- stage 3: roasted bean -->
+  <g transform="translate(490 250)">
+    <circle r="70" fill="#FFFCF6" stroke="#E4D7C5" stroke-width="1.5"/>
+    <ellipse rx="34" ry="48" transform="rotate(-16)" fill="#5B3418" stroke="#2C170A" stroke-width="2"/>
+    <path d="M-8 -40 C10 -18 -16 4 2 40" fill="none" stroke="#C99A4E" stroke-width="3" stroke-linecap="round"/>
+    <path d="M-40 52 C-14 62 14 62 40 52" fill="none" stroke="#E4D7C5" stroke-width="2"/>
+  </g>
+
+  <!-- stage 4: cup -->
+  <g transform="translate(670 250)">
+    <circle r="70" fill="#FFFCF6" stroke="#E4D7C5" stroke-width="1.5"/>
+    <path d="M-34 -22 H30 V22 A30 30 0 0 1 -30 22 Z" fill="#FFFCF6" stroke="#241812" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M-34 -12 H30" stroke="#B4552A" stroke-width="8"/>
+    <path d="M30 -14 H42 A16 16 0 0 1 30 16" fill="none" stroke="#241812" stroke-width="3"/>
+    <path d="M-40 44 H40" stroke="#5E4B3C" stroke-width="3" stroke-linecap="round"/>
+    <path d="M-12 -42 C-20 -52 -4 -56 -12 -66 M8 -42 C0 -52 16 -56 8 -66" fill="none" stroke="#A9795B" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- arrows -->
+  <g fill="none" stroke="#B4552A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M222 250 H246 M238 242 L246 250 L238 258"/>
+    <path d="M392 250 H416 M408 242 L416 250 L408 258"/>
+    <path d="M572 250 H596 M588 242 L596 250 L588 258"/>
+  </g>
+
+  <!-- captions -->
+  <g font-family="monospace" font-size="12" letter-spacing="2" fill="#7B6A5A" text-anchor="middle">
+    <text x="140" y="360">01 CHERRY</text>
+    <text x="310" y="360">02 GREEN</text>
+    <text x="490" y="360">03 ROAST</text>
+    <text x="670" y="360">04 CUP</text>
+  </g>
+  <g stroke-width="4" stroke-linecap="round">
+    <line x1="92" y1="400" x2="188" y2="400" stroke="#D9B98C"/>
+    <line x1="262" y1="400" x2="358" y2="400" stroke="#C9A177"/>
+    <line x1="442" y1="400" x2="538" y2="400" stroke="#8A5A34"/>
+    <line x1="622" y1="400" x2="718" y2="400" stroke="#3D2212"/>
+  </g>
+</svg>

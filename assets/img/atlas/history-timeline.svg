@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img">
+  <defs>
+    <pattern id="grain" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="0.8" fill="#241812" opacity=".055"/></pattern>
+  </defs>
+  <rect width="800" height="500" fill="#F5EEE3"/>
+  <rect width="800" height="500" fill="url(#grain)"/>
+  <rect x="22" y="22" width="756" height="456" rx="18" fill="none" stroke="#E4D7C5" stroke-width="1.5"/>
+  <circle cx="754" cy="46" r="4.5" fill="#B4552A"/>
+  <text x="48" y="60" font-family="monospace" font-size="13" letter-spacing="3" fill="#7B6A5A">A SHORT HISTORY / FIVE STOPS</text>
+  <line x1="48" y1="76" x2="752" y2="76" stroke="#E4D7C5" stroke-width="1.5"/>
+
+  <!-- axis -->
+  <line x1="76" y1="268" x2="726" y2="268" stroke="#8A5A34" stroke-width="2.5" stroke-linecap="round"/>
+  <g fill="#B4552A">
+    <circle cx="112" cy="268" r="9"/><circle cx="264" cy="268" r="9"/>
+    <circle cx="416" cy="268" r="9"/><circle cx="568" cy="268" r="9"/>
+    <circle cx="712" cy="268" r="9"/>
+  </g>
+  <g fill="#FFFCF6" stroke="#8A5A34" stroke-width="2">
+    <circle cx="112" cy="268" r="3.5"/><circle cx="264" cy="268" r="3.5"/>
+    <circle cx="416" cy="268" r="3.5"/><circle cx="568" cy="268" r="3.5"/>
+    <circle cx="712" cy="268" r="3.5"/>
+  </g>
+
+  <!-- 1: cherry -->
+  <g transform="translate(112 176)">
+    <circle r="30" fill="#FFFCF6" stroke="#E4D7C5" stroke-width="1.5"/>
+    <circle cx="-8" cy="4" r="11" fill="#B4552A"/><circle cx="10" cy="4" r="11" fill="#B85E45"/>
+    <path d="M0 -8 C0 -18 4 -20 10 -22" fill="none" stroke="#5E4B3C" stroke-width="2"/>
+    <path d="M10 -22 C18 -26 22 -20 16 -16 C12 -14 8 -17 10 -22Z" fill="#8A5A34"/>
+  </g>
+  <!-- 2: arabic pot -->
+  <g transform="translate(264 176)">
+    <circle r="30" fill="#FFFCF6" stroke="#E4D7C5" stroke-width="1.5"/>
+    <path d="M-10 -14 H8 L12 10 C12 18 -14 18 -14 10 Z" fill="#D9B98C" stroke="#5E4B3C" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M8 -8 C22 -8 22 8 10 8" fill="none" stroke="#5E4B3C" stroke-width="2"/>
+    <path d="M-6 -14 L0 -24 L6 -14" fill="none" stroke="#5E4B3C" stroke-width="2"/>
+  </g>
+  <!-- 3: european cup -->
+  <g transform="translate(416 176)">
+    <circle r="30" fill="#FFFCF6" stroke="#E4D7C5" stroke-width="1.5"/>
+    <path d="M-16 -8 H10 V8 A13 13 0 0 1 -16 8 Z" fill="#FFFCF6" stroke="#5E4B3C" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M-16 -2 H10" stroke="#B4552A" stroke-width="4"/>
+    <path d="M10 -6 H16 A8 8 0 0 1 10 8" fill="none" stroke="#5E4B3C" stroke-width="2"/>
+    <path d="M-20 14 H16" stroke="#5E4B3C" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <!-- 4: espresso machine -->
+  <g transform="translate(568 176)">
+    <circle r="30" fill="#FFFCF6" stroke="#E4D7C5" stroke-width="1.5"/>
+    <path d="M-18 -16 H18 V6 H-18 Z" fill="#8A5A34" stroke="#5E4B3C" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M-8 6 V12 M8 6 V12" stroke="#5E4B3C" stroke-width="2"/>
+    <path d="M-13 16 H13" stroke="#B4552A" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="-10" cy="-6" r="3" fill="#C99A4E"/>
+  </g>
+  <!-- 5: capsule -->
+  <g transform="translate(712 176)">
+    <circle r="30" fill="#FFFCF6" stroke="#E4D7C5" stroke-width="1.5"/>
+    <path d="M-14 -12 H14 L10 10 C10 14 -10 14 -10 10 Z" fill="#B4552A" stroke="#8A3A18" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M-16 -12 H16" stroke="#5E4B3C" stroke-width="3" stroke-linecap="round"/>
+    <path d="M-6 8 H6" stroke="#FFFCF6" stroke-width="2" opacity=".7"/>
+  </g>
+
+  <!-- connector stems -->
+  <g stroke="#E4D7C5" stroke-width="1.5" stroke-dasharray="4 6">
+    <line x1="112" y1="206" x2="112" y2="258"/><line x1="264" y1="206" x2="264" y2="258"/>
+    <line x1="416" y1="206" x2="416" y2="258"/><line x1="568" y1="206" x2="568" y2="258"/>
+    <line x1="712" y1="206" x2="712" y2="258"/>
+  </g>
+
+  <g font-family="monospace" font-size="12" letter-spacing="1.5" fill="#5E4B3C" text-anchor="middle">
+    <text x="112" y="312">9TH C</text><text x="264" y="312">15TH C</text>
+    <text x="416" y="312">17TH C</text><text x="568" y="312">20TH C</text>
+    <text x="712" y="312">TODAY</text>
+  </g>
+  <g font-family="monospace" font-size="10" letter-spacing="1" fill="#7B6A5A" text-anchor="middle">
+    <text x="112" y="336">FOUND</text><text x="264" y="336">CULTIVATED</text>
+    <text x="416" y="336">CAFES</text><text x="568" y="336">ESPRESSO</text>
+    <text x="712" y="336">CAPSULE</text>
+  </g>
+  <g stroke-width="4" stroke-linecap="round">
+    <line x1="76" y1="382" x2="200" y2="382" stroke="#D9B98C"/>
+    <line x1="212" y1="382" x2="336" y2="382" stroke="#C9A177"/>
+    <line x1="348" y1="382" x2="472" y2="382" stroke="#A9795B"/>
+    <line x1="484" y1="382" x2="608" y2="382" stroke="#8A5A34"/>
+    <line x1="620" y1="382" x2="726" y2="382" stroke="#B4552A"/>
+  </g>
+  <text x="48" y="452" font-family="monospace" font-size="12" letter-spacing="2" fill="#7B6A5A">ONE BEAN / MANY WAYS TO DRINK IT</text>
+</svg>

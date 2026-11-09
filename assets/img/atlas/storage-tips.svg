@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img">
+  <defs>
+    <pattern id="grain" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="0.8" fill="#241812" opacity=".055"/></pattern>
+  </defs>
+  <rect width="800" height="500" fill="#F5EEE3"/>
+  <rect width="800" height="500" fill="url(#grain)"/>
+  <rect x="22" y="22" width="756" height="456" rx="18" fill="none" stroke="#E4D7C5" stroke-width="1.5"/>
+  <circle cx="754" cy="46" r="4.5" fill="#B4552A"/>
+  <text x="48" y="60" font-family="monospace" font-size="13" letter-spacing="3" fill="#7B6A5A">GOOD TO KNOW / STORE IT RIGHT</text>
+  <line x1="48" y1="76" x2="752" y2="76" stroke="#E4D7C5" stroke-width="1.5"/>
+
+  <!-- airtight jar -->
+  <g transform="translate(248 268)">
+    <path d="M-72 -76 H72 L64 84 C64 98 -64 98 -64 84 Z" fill="#FFFCF6" stroke="#5E4B3C" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M-78 -92 H78 V-70 H-78 Z" fill="#8A5A34" stroke="#5E4B3C" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M-58 -52 H58" stroke="#E4D7C5" stroke-width="2"/>
+    <g fill="#8A5A34" stroke="#4A2C16" stroke-width="1.5">
+      <ellipse cx="-30" cy="8" rx="15" ry="21" transform="rotate(-16 -30 8)"/>
+      <ellipse cx="4" cy="18" rx="15" ry="21" transform="rotate(8 4 18)"/>
+      <ellipse cx="36" cy="4" rx="15" ry="21" transform="rotate(-8 36 4)"/>
+      <ellipse cx="-14" cy="50" rx="15" ry="21" transform="rotate(14 -14 50)"/>
+      <ellipse cx="26" cy="52" rx="15" ry="21" transform="rotate(-20 26 52)"/>
+    </g>
+    <g fill="none" stroke="#C99A4E" stroke-width="2">
+      <path d="M-30 -7 C-22 4 -36 16 -28 26 M4 1 C12 12 -2 24 6 34"/>
+    </g>
+    <path d="M-72 64 C-20 76 20 76 64 64" fill="none" stroke="#E4D7C5" stroke-width="2"/>
+  </g>
+
+  <!-- three "avoid" tokens -->
+  <g font-family="monospace" font-size="11" letter-spacing="1.5" fill="#7B6A5A" text-anchor="middle">
+    <text x="546" y="140">NO SUN</text><text x="546" y="268">NO DAMP</text><text x="546" y="396">NO HEAT</text>
+  </g>
+  <g transform="translate(474 168)">
+    <circle r="30" fill="#FFFCF6" stroke="#E4D7C5" stroke-width="1.5"/>
+    <circle r="12" fill="#C99A4E" opacity=".7"/>
+    <g stroke="#B4552A" stroke-width="2" stroke-linecap="round">
+      <line x1="-21" y1="0" x2="-16" y2="0"/><line x1="16" y1="0" x2="21" y2="0"/>
+      <line x1="0" y1="-21" x2="0" y2="-16"/><line x1="0" y1="16" x2="0" y2="21"/>
+    </g>
+    <line x1="-20" y1="20" x2="20" y2="-20" stroke="#B4552A" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(474 296)">
+    <circle r="30" fill="#FFFCF6" stroke="#E4D7C5" stroke-width="1.5"/>
+    <path d="M0 -18 C-12 -2 -16 6 -16 10 A16 16 0 0 0 16 10 C16 6 12 -2 0 -18Z" fill="#DCE7E3" stroke="#8A5A34" stroke-width="2"/>
+    <line x1="-20" y1="20" x2="20" y2="-20" stroke="#B4552A" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(474 424)">
+    <circle r="30" fill="#FFFCF6" stroke="#E4D7C5" stroke-width="1.5"/>
+    <path d="M-12 18 C-18 2 -2 -4 -6 -18 C6 -8 8 0 5 4 C13 -2 14 -10 11 -18 C26 -4 22 10 14 18 Z" fill="#B85E45" opacity=".85"/>
+    <line x1="-20" y1="-20" x2="20" y2="20" stroke="#B4552A" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- check mark -->
+  <g transform="translate(676 168)">
+    <circle r="30" fill="#FFFCF6" stroke="#E4D7C5" stroke-width="1.5"/>
+    <path d="M-12 0 L-3 10 L14 -10" fill="none" stroke="#8A5A34" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g font-family="monospace" font-size="11" letter-spacing="1.5" fill="#7B6A5A" text-anchor="middle">
+    <text x="676" y="220">WHOLE BEAN</text>
+    <text x="676" y="240">AIRTIGHT</text>
+  </g>
+  <g transform="translate(676 320)">
+    <circle r="30" fill="#FFFCF6" stroke="#E4D7C5" stroke-width="1.5"/>
+    <path d="M-14 -10 H14 L10 12 C10 16 -10 16 -10 12 Z" fill="#B4552A" stroke="#8A3A18" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M-16 -10 H16" stroke="#5E4B3C" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <g font-family="monospace" font-size="11" letter-spacing="1.5" fill="#7B6A5A" text-anchor="middle">
+    <text x="676" y="372">CAPSULE</text>
+    <text x="676" y="392">ONE SHOT</text>
+  </g>
+
+  <text x="48" y="452" font-family="monospace" font-size="12" letter-spacing="2" fill="#7B6A5A">COOL / DARK / DRY / USE IN 2–4 WEEKS</text>
+</svg>

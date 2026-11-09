@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img">
+  <defs>
+    <pattern id="grain" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="0.8" fill="#241812" opacity=".055"/></pattern>
+  </defs>
+  <rect width="800" height="500" fill="#F5EEE3"/>
+  <rect width="800" height="500" fill="url(#grain)"/>
+  <rect x="22" y="22" width="756" height="456" rx="18" fill="none" stroke="#E4D7C5" stroke-width="1.5"/>
+  <circle cx="754" cy="46" r="4.5" fill="#B4552A"/>
+  <text x="48" y="60" font-family="monospace" font-size="13" letter-spacing="3" fill="#7B6A5A">STEP 01 / PICKING THE RIPE CHERRY</text>
+  <line x1="48" y1="76" x2="752" y2="76" stroke="#E4D7C5" stroke-width="1.5"/>
+
+  <!-- branch -->
+  <path d="M40 356 C170 330 250 250 330 178 C410 108 520 96 660 104" fill="none" stroke="#5E4B3C" stroke-width="7" stroke-linecap="round"/>
+  <g fill="#8A5A34" stroke="#5E4B3C" stroke-width="2" stroke-linejoin="round">
+    <path d="M180 322 C150 286 120 282 104 292 C120 322 150 334 180 322Z"/>
+    <path d="M300 210 C272 180 244 180 228 192 C244 222 274 230 300 210Z"/>
+    <path d="M452 122 C424 94 396 96 380 108 C396 138 426 146 452 122Z"/>
+    <path d="M588 104 C564 76 536 78 520 90 C536 120 562 126 588 104Z"/>
+  </g>
+  <!-- cherries, ripeness gradient -->
+  <g stroke="#8A3A18" stroke-width="2">
+    <circle cx="214" cy="296" r="20" fill="#B4552A"/>
+    <circle cx="252" cy="266" r="18" fill="#B85E45"/>
+    <circle cx="338" cy="212" r="21" fill="#B4552A"/>
+    <circle cx="376" cy="190" r="17" fill="#D9B98C"/>
+    <circle cx="488" cy="152" r="20" fill="#B4552A"/>
+    <circle cx="524" cy="140" r="17" fill="#B85E45"/>
+    <circle cx="626" cy="138" r="20" fill="#B4552A"/>
+  </g>
+  <g fill="#5E4B3C">
+    <path d="M214 274 C216 264 220 260 226 258" fill="none" stroke="#5E4B3C" stroke-width="2.5"/>
+    <path d="M338 190 C340 180 344 176 350 174" fill="none" stroke="#5E4B3C" stroke-width="2.5"/>
+    <path d="M488 130 C490 120 494 116 500 114" fill="none" stroke="#5E4B3C" stroke-width="2.5"/>
+    <path d="M626 116 C628 106 632 102 638 100" fill="none" stroke="#5E4B3C" stroke-width="2.5"/>
+  </g>
+
+  <!-- basket -->
+  <g transform="translate(600 336)">
+    <path d="M-96 -20 H96 L80 88 H-80 Z" fill="#D9B98C" stroke="#8A5A34" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M-96 -20 C-60 -46 60 -46 96 -20" fill="none" stroke="#8A5A34" stroke-width="3"/>
+    <g stroke="#8A5A34" stroke-width="2" opacity=".65">
+      <line x1="-58" y1="-16" x2="-48" y2="84"/>
+      <line x1="0" y1="-16" x2="0" y2="84"/>
+      <line x1="58" y1="-16" x2="48" y2="84"/>
+      <line x1="-88" y1="26" x2="88" y2="26"/>
+      <line x1="-84" y1="58" x2="84" y2="58"/>
+    </g>
+    <g fill="#B4552A" stroke="#8A3A18" stroke-width="1.5">
+      <circle cx="-44" cy="-14" r="14"/><circle cx="-12" cy="-18" r="15"/>
+      <circle cx="22" cy="-15" r="14"/><circle cx="54" cy="-14" r="13"/>
+    </g>
+  </g>
+
+  <text x="48" y="452" font-family="monospace" font-size="12" letter-spacing="2" fill="#7B6A5A">RIPE RED ONLY / HAND SORTED</text>
+</svg>

@@ -1,0 +1,490 @@
+/* ─────────────────────────────────────────────
+   一杯之间 · Coffee Atlas — 原料图鉴增量样式
+   仅新增选择器，不改动 styles.css 的任何既有规则。
+   沿用站点设计变量：cream paper / espresso ink / caramel accent
+   ───────────────────────────────────────────── */
+
+/* ── 通用：图片容器与图注 ────────────────────── */
+
+.atlas-figure { margin: 0; min-width: 0; }
+
+.atlas-media {
+  position: relative;
+  margin: 0;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border: 1px solid var(--site-border);
+  border-radius: calc(var(--site-radius) * 0.9);
+  background: color-mix(in srgb, var(--site-bg) 70%, var(--site-border));
+  box-shadow: var(--shadow-sm);
+}
+.atlas-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 50%;
+  transition: transform calc(620ms * var(--site-motion, 1)) var(--ease);
+}
+.atlas-media:hover img { transform: scale(1.022); }
+
+.atlas-cap {
+  margin: 10px 2px 0;
+  font-size: calc(12px * var(--type-scale, 1));
+  line-height: 1.75;
+  color: var(--site-muted);
+  letter-spacing: 0.01em;
+}
+.atlas-cap b { color: var(--ink-soft); font-weight: 600; }
+
+.atlas-lead {
+  position: relative;
+  margin: -18px 0 calc(34px * var(--site-space));
+  padding: 14px 18px 14px 42px;
+  background: color-mix(in srgb, var(--site-surface) 85%, transparent);
+  border: 1px solid var(--site-border);
+  border-left: 3px solid var(--site-accent);
+  border-radius: 0 calc(var(--site-radius) * 0.6) calc(var(--site-radius) * 0.6) 0;
+  font-size: calc(13.5px * var(--type-scale, 1));
+  line-height: 1.8;
+  color: var(--ink-soft);
+}
+.atlas-lead::before {
+  content: "→";
+  position: absolute;
+  left: 17px;
+  top: 14px;
+  color: var(--site-accent);
+  font-family: var(--mono);
+  font-size: calc(15px * var(--type-scale, 1));
+  line-height: 1.6;
+}
+.atlas-lead a, .atlas-note a {
+  color: var(--site-accent);
+  border-bottom: 1px solid color-mix(in srgb, var(--site-accent) 42%, transparent);
+  transition: border-color var(--dur) var(--ease);
+}
+.atlas-lead a:hover, .atlas-note a:hover { border-color: var(--site-accent); }
+
+.atlas-note {
+  margin: 14px 0 0;
+  font-size: calc(12.5px * var(--type-scale, 1));
+  line-height: 1.8;
+  color: var(--site-muted);
+}
+.atlas-why {
+  margin: 8px 0 0;
+  padding-left: 10px;
+  border-left: 2px solid color-mix(in srgb, var(--site-accent) 34%, transparent);
+  font-size: calc(12.5px * var(--type-scale, 1));
+  line-height: 1.75;
+  color: var(--site-muted);
+}
+.atlas-why b { color: var(--site-accent); font-weight: 600; }
+.atlas-fine {
+  margin: 18px 0 0;
+  padding-top: 14px;
+  border-top: 1px dashed var(--site-border);
+  font-size: calc(12px * var(--type-scale, 1));
+  line-height: 1.8;
+  color: var(--site-muted);
+}
+
+/* ── 引言区：图 + 阅读引导 ────────────────────── */
+
+.atlas-intro {
+  display: grid;
+  grid-template-columns: 1.12fr 0.88fr;
+  gap: clamp(26px, 4vw, 52px);
+  align-items: center;
+}
+.atlas-intro-copy h3 {
+  margin: 0 0 12px;
+  font-family: var(--serif);
+  font-size: calc(clamp(26px, 3vw, 34px) * var(--type-scale, 1));
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.atlas-intro-copy > p:not(.mini-label) {
+  margin: 0 0 18px;
+  font-size: calc(14.5px * var(--type-scale, 1));
+  line-height: 1.9;
+  color: var(--ink-soft);
+}
+.atlas-read {
+  list-style: none;
+  counter-reset: read;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--site-border);
+}
+.atlas-read li {
+  counter-increment: read;
+  display: flex;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px dashed var(--site-border);
+  font-size: calc(13.5px * var(--type-scale, 1));
+  line-height: 1.7;
+  color: var(--ink-soft);
+}
+.atlas-read li::before {
+  content: "0" counter(read);
+  flex: none;
+  font-family: var(--mono);
+  font-size: calc(11px * var(--type-scale, 1));
+  letter-spacing: 0.08em;
+  color: var(--site-accent);
+  padding-top: 3px;
+}
+
+/* ── 区块标题 ──────────────────────────────── */
+
+.atlas-block { margin-top: calc(64px * var(--site-space)); }
+.atlas-block-head {
+  max-width: 720px;
+  margin-bottom: calc(28px * var(--site-space));
+}
+.atlas-block-head h3 {
+  margin: 0 0 10px;
+  font-family: var(--serif);
+  font-size: calc(clamp(25px, 3vw, 32px) * var(--type-scale, 1));
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.atlas-block-head p:last-child {
+  margin: 0;
+  font-size: calc(14.5px * var(--type-scale, 1));
+  line-height: 1.85;
+  color: var(--site-muted);
+}
+
+/* ── 种类：概览图 + 三张说明卡 ────────────── */
+
+.atlas-species {
+  display: grid;
+  grid-template-columns: 0.94fr 1.06fr;
+  gap: clamp(24px, 3.5vw, 44px);
+  align-items: start;
+}
+.atlas-cards {
+  display: grid;
+  gap: 12px;
+}
+.atlas-card {
+  padding: 18px 20px;
+  background: var(--site-surface);
+  border: 1px solid var(--site-border);
+  border-radius: calc(var(--site-radius) * 0.8);
+  transition: border-color var(--dur) var(--ease), transform var(--dur) var(--ease);
+}
+.atlas-card:hover {
+  border-color: color-mix(in srgb, var(--site-accent) 40%, var(--site-border));
+  transform: translateX(3px);
+}
+.atlas-card-head {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.atlas-card-head h4 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: calc(21px * var(--type-scale, 1));
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.atlas-card-head span {
+  font-family: var(--mono);
+  font-size: calc(10.5px * var(--type-scale, 1));
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--site-muted);
+}
+.atlas-card p {
+  margin: 8px 0 0;
+  font-size: calc(13.5px * var(--type-scale, 1));
+  line-height: 1.8;
+  color: var(--ink-soft);
+}
+.atlas-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 8px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.atlas-facts li {
+  font-size: calc(11.5px * var(--type-scale, 1));
+  color: var(--site-muted);
+  border: 1px solid var(--site-border);
+  background: color-mix(in srgb, var(--site-bg) 60%, transparent);
+  border-radius: 999px;
+  padding: 3px 10px;
+  letter-spacing: 0.02em;
+}
+.atlas-facts li b { color: var(--site-accent); font-weight: 600; }
+
+/* ── 产地：地形意象图 + 三个产区 ────────────── */
+
+.atlas-origin {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(24px, 3.5vw, 44px);
+  align-items: start;
+}
+.atlas-origin-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--site-border);
+}
+.atlas-origin-list li {
+  padding: 16px 0;
+  border-bottom: 1px dashed var(--site-border);
+}
+.atlas-origin-list h4 {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin: 0 0 5px;
+  font-family: var(--serif);
+  font-size: calc(19px * var(--type-scale, 1));
+  font-weight: 700;
+}
+.atlas-origin-list h4 em {
+  font-family: var(--mono);
+  font-style: normal;
+  font-size: calc(10.5px * var(--type-scale, 1));
+  letter-spacing: 0.12em;
+  color: var(--site-accent);
+  text-transform: uppercase;
+}
+.atlas-origin-list p {
+  margin: 0;
+  font-size: calc(13.5px * var(--type-scale, 1));
+  line-height: 1.8;
+  color: var(--ink-soft);
+}
+
+/* ── 步骤：四阶段 ────────────── */
+
+.atlas-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: calc(16px * var(--site-space));
+}
+.atlas-step {
+  display: flex;
+  flex-direction: column;
+  padding: 14px;
+  background: var(--site-surface);
+  border: 1px solid var(--site-border);
+  border-radius: calc(var(--site-radius) * 0.85);
+}
+.atlas-step-media {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border: 1px solid var(--site-border);
+  border-radius: calc(var(--site-radius) * 0.6);
+  background: color-mix(in srgb, var(--site-bg) 70%, var(--site-border));
+}
+.atlas-step-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform calc(620ms * var(--site-motion, 1)) var(--ease);
+}
+.atlas-step:hover .atlas-step-media img { transform: scale(1.035); }
+.atlas-step-no {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  min-width: 26px;
+  height: 26px;
+  padding: 0 6px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--site-surface) 88%, transparent);
+  border: 1px solid var(--site-border);
+  font-family: var(--mono);
+  font-size: calc(11px * var(--type-scale, 1));
+  color: var(--site-accent);
+}
+.atlas-step h4 {
+  margin: 14px 0 7px;
+  font-family: var(--serif);
+  font-size: calc(18px * var(--type-scale, 1));
+  font-weight: 700;
+}
+.atlas-step > p {
+  margin: 0;
+  font-size: calc(12.8px * var(--type-scale, 1));
+  line-height: 1.8;
+  color: var(--ink-soft);
+}
+.atlas-step .atlas-why { margin-top: auto; padding-top: 10px; }
+
+/* ── 历史：时间轴图 + 节点说明 ────────────── */
+
+.atlas-timeline {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: clamp(24px, 3.5vw, 44px);
+  align-items: center;
+}
+.atlas-timeline-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-left: 2px solid var(--site-border);
+}
+.atlas-timeline-list li {
+  position: relative;
+  padding: 0 0 18px 22px;
+}
+.atlas-timeline-list li:last-child { padding-bottom: 0; }
+.atlas-timeline-list li::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 8px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--site-surface);
+  border: 2px solid var(--site-accent);
+}
+.atlas-timeline-list strong {
+  display: block;
+  font-family: var(--mono);
+  font-size: calc(11px * var(--type-scale, 1));
+  letter-spacing: 0.12em;
+  color: var(--site-accent);
+  margin-bottom: 3px;
+}
+.atlas-timeline-list h4 {
+  margin: 0 0 4px;
+  font-family: var(--serif);
+  font-size: calc(17px * var(--type-scale, 1));
+  font-weight: 700;
+}
+.atlas-timeline-list p {
+  margin: 0;
+  font-size: calc(12.8px * var(--type-scale, 1));
+  line-height: 1.75;
+  color: var(--site-muted);
+}
+
+/* ── 提示与注意事项 ─────────────── */
+
+.atlas-tips {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(24px, 3.5vw, 44px);
+  align-items: center;
+  padding: calc(30px * var(--site-space));
+  background: var(--site-surface);
+  border: 1px solid var(--site-border);
+  border-radius: calc(var(--site-radius) * 1.1);
+  box-shadow: var(--shadow-sm);
+}
+.atlas-tips-copy h3 {
+  margin: 0 0 8px;
+  font-family: var(--serif);
+  font-size: calc(clamp(23px, 2.6vw, 29px) * var(--type-scale, 1));
+  font-weight: 700;
+}
+.atlas-tips-list {
+  list-style: none;
+  margin: 14px 0 0;
+  padding: 0;
+}
+.atlas-tips-list li {
+  display: flex;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--site-border);
+  font-size: calc(13.5px * var(--type-scale, 1));
+  line-height: 1.75;
+  color: var(--ink-soft);
+}
+.atlas-tips-list li:last-child { border-bottom: 0; }
+.atlas-tips-list li span {
+  flex: none;
+  font-family: var(--mono);
+  font-size: calc(10.5px * var(--type-scale, 1));
+  color: var(--site-accent);
+  letter-spacing: 0.08em;
+  padding-top: 3px;
+}
+
+.atlas-jump {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: calc(36px * var(--site-space));
+  padding: 12px 20px;
+  border: 1px solid var(--site-border);
+  border-radius: 999px;
+  background: var(--site-surface);
+  font-size: calc(13.5px * var(--type-scale, 1));
+  color: var(--ink-soft);
+  transition: border-color var(--dur) var(--ease), color var(--dur) var(--ease), transform var(--dur) var(--ease);
+}
+.atlas-jump:hover { border-color: var(--site-accent); color: var(--site-accent); transform: translateY(-2px); }
+.atlas-jump span { color: var(--site-accent); }
+
+/* ── 与既有图片模块统一节奏（无损增强，不改功能） ── */
+/* 加载期间给照片一个与纸色一致的占位，避免白块跳动；统一裁切视线 */
+.f-media img,
+.step-media img,
+.bean-media img,
+.checklist-media img,
+.card-media img {
+  background-color: color-mix(in srgb, var(--site-bg) 70%, var(--site-border));
+}
+.f-media img { object-position: center 52%; }
+.step-media img, .checklist-media img { object-position: center 52%; }
+
+/* ── Responsive ────────────────────── */
+
+@media (max-width: 1040px) {
+  .atlas-intro { grid-template-columns: 1fr; gap: 26px; }
+  .atlas-species, .atlas-origin, .atlas-timeline, .atlas-tips { grid-template-columns: 1fr; }
+  .atlas-figure { max-width: 720px; }
+  .atlas-steps { grid-template-columns: 1fr 1fr; }
+  .atlas-cards { grid-template-columns: 1fr 1fr; }
+  .atlas-card:last-child { grid-column: 1 / -1; }
+}
+
+@media (max-width: 720px) {
+  .atlas-lead { margin-top: -6px; margin-bottom: 26px; padding: 12px 14px 12px 36px; }
+  .atlas-lead::before { left: 13px; top: 12px; }
+  .atlas-block { margin-top: calc(44px * var(--site-space)); }
+  .atlas-block-head { margin-bottom: 22px; }
+  .atlas-media, .atlas-step-media { aspect-ratio: 16 / 10; }
+  .atlas-intro-copy h3 { font-size: calc(25px * var(--type-scale, 1)); }
+  .atlas-steps { grid-template-columns: 1fr; gap: 12px; }
+  .atlas-step { padding: 12px; }
+  .atlas-figure { max-width: none; }
+  .atlas-cards { grid-template-columns: 1fr; }
+  .atlas-card:last-child { grid-column: auto; }
+  .atlas-card { padding: 15px 16px; }
+  .atlas-tips { padding: 20px 16px; gap: 20px; }
+  .atlas-timeline-list li { padding-bottom: 14px; }
+  .atlas-jump { margin-top: 26px; }
+  .atlas-cap { font-size: calc(11.5px * var(--type-scale, 1)); }
+}
+
+@media (max-width: 420px) {
+  .atlas-intro-copy > p:not(.mini-label),
+  .atlas-block-head p:last-child { font-size: calc(13.2px * var(--type-scale, 1)); }
+  .atlas-card-head h4 { font-size: calc(19px * var(--type-scale, 1)); }
+  .atlas-read li { gap: 9px; }
+}

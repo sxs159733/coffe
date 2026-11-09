@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img">
+  <defs>
+    <pattern id="grain" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="0.8" fill="#241812" opacity=".055"/></pattern>
+  </defs>
+  <rect width="800" height="500" fill="#F5EEE3"/>
+  <rect width="800" height="500" fill="url(#grain)"/>
+  <rect x="22" y="22" width="756" height="456" rx="18" fill="none" stroke="#E4D7C5" stroke-width="1.5"/>
+  <circle cx="754" cy="46" r="4.5" fill="#B4552A"/>
+  <text x="48" y="60" font-family="monospace" font-size="13" letter-spacing="3" fill="#7B6A5A">STEP 03 / DRYING, HULLING, GRADING</text>
+  <line x1="48" y1="76" x2="752" y2="76" stroke="#E4D7C5" stroke-width="1.5"/>
+
+  <!-- drying table in perspective -->
+  <g>
+    <path d="M70 196 H470 L520 330 H40 Z" fill="#EFE0CB" stroke="#8A5A34" stroke-width="2.5" stroke-linejoin="round"/>
+    <g stroke="#C9A177" stroke-width="1.5" opacity=".8">
+      <line x1="130" y1="196" x2="112" y2="330"/><line x1="210" y1="196" x2="200" y2="330"/>
+      <line x1="290" y1="196" x2="288" y2="330"/><line x1="370" y1="196" x2="376" y2="330"/>
+      <line x1="62" y1="238" x2="490" y2="238"/><line x1="52" y1="284" x2="506" y2="284"/>
+    </g>
+    <g fill="#B4552A" stroke="#8A3A18" stroke-width="1.5">
+      <ellipse cx="110" cy="218" rx="9" ry="6"/><ellipse cx="176" cy="222" rx="9" ry="6"/><ellipse cx="248" cy="216" rx="9" ry="6"/>
+      <ellipse cx="322" cy="224" rx="9" ry="6"/><ellipse cx="398" cy="218" rx="9" ry="6"/>
+      <ellipse cx="88" cy="262" rx="10" ry="7"/><ellipse cx="166" cy="266" rx="10" ry="7"/>
+      <ellipse cx="252" cy="260" rx="10" ry="7"/><ellipse cx="340" cy="268" rx="10" ry="7"/><ellipse cx="428" cy="262" rx="10" ry="7"/>
+      <ellipse cx="74" cy="308" rx="11" ry="8"/><ellipse cx="160" cy="310" rx="11" ry="8"/>
+      <ellipse cx="256" cy="306" rx="11" ry="8"/><ellipse cx="354" cy="312" rx="11" ry="8"/><ellipse cx="452" cy="306" rx="11" ry="8"/>
+    </g>
+    <g fill="none" stroke="#5E4B3C" stroke-width="3">
+      <line x1="40" y1="330" x2="40" y2="366"/><line x1="520" y1="330" x2="520" y2="366"/>
+    </g>
+  </g>
+
+  <!-- sun -->
+  <g transform="translate(618 152)">
+    <circle r="34" fill="#C99A4E" opacity=".55"/>
+    <g stroke="#B4552A" stroke-width="2.5" stroke-linecap="round">
+      <line x1="0" y1="-52" x2="0" y2="-62"/><line x1="0" y1="52" x2="0" y2="62"/>
+      <line x1="-52" y1="0" x2="-62" y2="0"/><line x1="52" y1="0" x2="62" y2="0"/>
+      <line x1="-37" y1="-37" x2="-44" y2="-44"/><line x1="37" y1="37" x2="44" y2="44"/>
+      <line x1="37" y1="-37" x2="44" y2="-44"/><line x1="-37" y1="37" x2="-44" y2="44"/>
+    </g>
+  </g>
+
+  <!-- hulling / grading result -->
+  <g transform="translate(618 300)">
+    <path d="M-72 -34 H72" stroke="#E4D7C5" stroke-width="1.5"/>
+    <g transform="translate(-48 6)"><ellipse rx="17" ry="24" transform="rotate(-14)" fill="#D9B98C" stroke="#A9795B" stroke-width="2"/><path d="M-4 -20 C6 -8 -8 6 2 20" fill="none" stroke="#8A5A34" stroke-width="2"/></g>
+    <g transform="translate(0 6)"><ellipse rx="17" ry="24" transform="rotate(-14)" fill="#C9A177" stroke="#8A5A34" stroke-width="2"/><path d="M-4 -20 C6 -8 -8 6 2 20" fill="none" stroke="#6B3E1E" stroke-width="2"/></g>
+    <g transform="translate(48 6)"><ellipse rx="17" ry="24" transform="rotate(-14)" fill="#B0855A" stroke="#6B3E1E" stroke-width="2"/><path d="M-4 -20 C6 -8 -8 6 2 20" fill="none" stroke="#4A2C16" stroke-width="2"/></g>
+    <text x="0" y="62" font-family="monospace" font-size="12" letter-spacing="1.5" fill="#5E4B3C" text-anchor="middle">SORTED BY SIZE</text>
+  </g>
+
+  <g fill="none" stroke="#B4552A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M542 262 H574 M566 254 L574 262 L566 270"/>
+  </g>
+  <text x="48" y="452" font-family="monospace" font-size="12" letter-spacing="2" fill="#7B6A5A">11% MOISTURE / READY TO SHIP</text>
+</svg>
