@@ -37,7 +37,6 @@
   const clearFilters = $("#clearFilters");
   const dialog = $("#recipeDialog");
   const dialogContent = $("#dialogContent");
-  const lightbox = $("#lightbox");
 
   /* ── Render category chips ─────────────────── */
 
@@ -234,7 +233,7 @@
   }
 
   dialog.addEventListener("close", () => {
-    if (!lightbox.open) document.body.classList.remove("is-locked");
+    document.body.classList.remove("is-locked");
   });
   dialog.addEventListener("click", (e) => {
     if (e.target === dialog) closeDialog();
@@ -379,28 +378,6 @@
     openRecipe(RECIPES[seed % RECIPES.length].id);
   });
 
-  /* ── Lightbox ──────────────────────────────── */
-
-  function openLightbox(btn) {
-    const img = $("img", btn);
-    $("#lightboxImg").src = btn.dataset.full;
-    $("#lightboxImg").alt = img ? img.alt : "";
-    $("#lightboxCaption").textContent = btn.dataset.caption || "";
-    document.body.classList.add("is-locked");
-    lightbox.showModal();
-  }
-
-  $$(".g-item").forEach((btn) => btn.addEventListener("click", () => openLightbox(btn)));
-  $("#lightboxClose").addEventListener("click", () => lightbox.close());
-  lightbox.addEventListener("click", (e) => {
-    if (e.target === lightbox) lightbox.close();
-  });
-  lightbox.addEventListener("close", () => {
-    if (!dialog.open) document.body.classList.remove("is-locked");
-    $("#lightboxImg").removeAttribute("src");
-    $("#lightboxImg").alt = "";
-  });
-
   /* ── Header, reveal, shortcuts ─────────────── */
 
   const header = $("#siteHeader");
@@ -430,7 +407,7 @@
   document.addEventListener("keydown", (e) => {
     const tag = (e.target.tagName || "").toLowerCase();
     const typing = tag === "input" || tag === "textarea" || tag === "select" || e.target.isContentEditable;
-    if (e.key === "/" && !typing && !dialog.open && !lightbox.open) {
+    if (e.key === "/" && !typing && !dialog.open) {
       e.preventDefault();
       searchInput.focus();
       searchInput.scrollIntoView({ behavior: "smooth", block: "center" });

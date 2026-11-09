@@ -1254,48 +1254,65 @@ h1 { margin: 0; }
 }
 .empty p { margin: 0 0 20px; font-size: calc(14px * var(--type-scale, 1)); color: var(--site-muted); }
 
-/* ── Gallery ────────────────────────────────── */
+/* ── FAQ ────────────────────────────────────── */
 
-.gallery {
+.faq-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr 1fr;
   gap: calc(14px * var(--site-space));
+  align-items: start;
 }
-.g-item {
-  position: relative;
-  display: block;
-  padding: 0;
+.faq-item {
   border: 1px solid var(--site-border);
   border-radius: var(--site-radius);
-  background: var(--site-bg);
+  background: var(--site-surface);
   overflow: hidden;
-  aspect-ratio: 3 / 4;
-  cursor: zoom-in;
-  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+  transition: border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
 }
-.g-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
-  transition: transform calc(700ms * var(--site-motion, 1)) var(--ease);
+.faq-item:hover { border-color: color-mix(in srgb, var(--site-accent) 38%, var(--site-border)); }
+.faq-item[open] {
+  border-color: color-mix(in srgb, var(--site-accent) 52%, var(--site-border));
+  box-shadow: var(--shadow-sm);
 }
-.g-item:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
-.g-item:hover img { transform: scale(1.04); }
-.g-cap {
-  position: absolute;
-  inset: auto 0 0;
+.faq-item summary {
   display: flex;
-  flex-direction: column;
-  gap: 2px;
-  padding: 34px 14px 12px;
-  background: linear-gradient(to top, rgba(28, 17, 10, 0.82), rgba(28, 17, 10, 0.32) 55%, transparent);
-  color: #fff8ef;
-  text-align: left;
-  pointer-events: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: calc(17px * var(--site-space)) calc(20px * var(--site-space));
+  font-size: calc(15px * var(--type-scale, 1));
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  list-style: none;
 }
-.g-cap b { font-size: calc(14px * var(--type-scale, 1)); font-weight: 600; letter-spacing: 0.02em; }
-.g-cap small { font-size: calc(11.5px * var(--type-scale, 1)); opacity: 0.72; letter-spacing: 0.04em; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::marker { content: ""; }
+.faq-icon {
+  flex: none;
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--site-border);
+  border-radius: 50%;
+  font-size: calc(14px * var(--type-scale, 1));
+  font-weight: 400;
+  color: var(--site-muted);
+  transition: transform var(--dur) var(--ease), color var(--dur) var(--ease), border-color var(--dur) var(--ease);
+}
+.faq-item[open] .faq-icon {
+  transform: rotate(45deg);
+  color: var(--site-accent);
+  border-color: color-mix(in srgb, var(--site-accent) 52%, var(--site-border));
+}
+.faq-item p {
+  margin: 0;
+  padding: 0 calc(20px * var(--site-space)) calc(18px * var(--site-space));
+  font-size: calc(13.5px * var(--type-scale, 1));
+  line-height: 1.9;
+  color: var(--site-muted);
+}
 
 /* ── Footer ─────────────────────────────────── */
 
@@ -1622,55 +1639,6 @@ dialog { color: var(--site-fg); }
   color: var(--site-on-accent);
 }
 
-/* ── Lightbox ───────────────────────────────── */
-
-.lightbox {
-  border: 0;
-  padding: 0;
-  background: transparent;
-  max-width: 92vw;
-  max-height: 92vh;
-  overflow: visible;
-}
-.lightbox::backdrop {
-  background: rgba(20, 12, 7, 0.82);
-  -webkit-backdrop-filter: blur(6px);
-  backdrop-filter: blur(6px);
-}
-.lightbox figure { margin: 0; text-align: center; }
-.lightbox img {
-  max-width: 92vw;
-  max-height: 80vh;
-  width: auto;
-  border-radius: calc(var(--site-radius) * 0.8);
-  box-shadow: var(--shadow-lg);
-  margin-inline: auto;
-}
-.lightbox figcaption {
-  margin-top: 14px;
-  font-size: calc(13.5px * var(--type-scale, 1));
-  letter-spacing: 0.04em;
-  color: rgba(255, 248, 239, 0.82);
-}
-.lightbox-close {
-  position: fixed;
-  top: 22px;
-  right: 24px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 248, 239, 0.28);
-  background: rgba(255, 248, 239, 0.08);
-  color: #fff8ef;
-  font-size: calc(22px * var(--type-scale, 1));
-  line-height: 1;
-  display: grid;
-  place-items: center;
-  -webkit-backdrop-filter: blur(6px);
-  backdrop-filter: blur(6px);
-}
-.lightbox-close:hover { background: rgba(255, 248, 239, 0.18); }
-
 /* ── Reveal ─────────────────────────────────── */
 
 .reveal {
@@ -1697,7 +1665,6 @@ dialog { color: var(--site-fg); }
   .capsule-grid { grid-template-columns: 1fr; }
   .bean-card { max-width: 560px; }
   .recipe-grid { grid-template-columns: repeat(2, 1fr); }
-  .gallery { grid-template-columns: repeat(3, 1fr); }
   .checklist ul { grid-template-columns: repeat(2, 1fr); }
 }
 
@@ -1741,7 +1708,7 @@ dialog { color: var(--site-fg); }
   .dialog-head { grid-template-columns: 1fr; }
   .dialog-media { border-right: 0; border-bottom: 1px solid var(--site-border); }
   .dialog-cols { grid-template-columns: 1fr; gap: 26px; }
-  .gallery { grid-template-columns: repeat(2, 1fr); }
+  .faq-grid { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: 1fr; }
   .footer-links { order: 2; }
   .dialog-hero { padding: 24px 22px 20px; }
@@ -1749,17 +1716,14 @@ dialog { color: var(--site-fg); }
   .dialog-panel { max-height: 92vh; }
   .recipe-dialog { max-height: 92vh; }
   .dialog-close { top: 10px; right: 10px; }
-  .lightbox-close { top: 12px; right: 12px; }
 }
 
 @media (max-width: 420px) {
   .hero-stats { gap: 16px; }
   .hero-stats dt { font-size: calc(21px * var(--type-scale, 1)); }
   .hero-actions .btn { flex: 1; }
-  .gallery { grid-template-columns: 1fr 1fr; gap: 10px; }
-  .g-cap { padding: 26px 10px 10px; }
-  .g-cap b { font-size: calc(11.5px * var(--type-scale, 1)); }
-  .g-cap small { font-size: calc(9px * var(--type-scale, 1)); }
+  .faq-item summary { padding: calc(15px * var(--site-space)) 16px; }
+  .faq-item p { padding: 0 16px calc(16px * var(--site-space)); }
   .calc-row { flex-wrap: wrap; }
   .calc-item { flex: 1 1 40%; }
 }
