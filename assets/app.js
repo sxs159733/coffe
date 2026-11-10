@@ -75,6 +75,17 @@
     if (state.sort === "time") list = list.slice().sort((a, b) => a.time - b.time || b.strength - a.strength);
     if (state.sort === "strong") list = list.slice().sort((a, b) => b.strength - a.strength || a.time - b.time);
     if (state.sort === "light") list = list.slice().sort((a, b) => a.strength - b.strength || a.time - b.time);
+    if (state.sort === "rating" || state.sort === "comments") {
+      const statOf = (r) => (window.JZSCommunity && JZSCommunity.getStats("coffe:" + r.id)) || { avg: 0, count: 0, comments: 0 };
+      list = list.slice().sort((a, b) => {
+        const sa = statOf(a), sb = statOf(b);
+        if (state.sort === "rating") {
+          // 有评分的在前，其余按平均分降序
+          return (sb.count > 0) - (sa.count > 0) || sb.avg - sa.avg || sb.count - sa.count;
+        }
+        return sb.comments - sa.comments || sb.avg - sa.avg;
+      });
+    }
     return list;
   }
 
@@ -108,6 +119,7 @@
               <span class="card-time">${r.time} 分钟</span>
               <span class="strength" title="咖啡浓度 ${r.strength}/5" aria-label="咖啡浓度 ${r.strength}/5">${strengthDots(r.strength)}</span>
             </div>
+            <div class="rcard-rate" data-rate="coffe:${r.id}"></div>
           </div>
         </article>`;
       })
@@ -119,6 +131,8 @@
 
     const filtered = state.category !== "all" || state.search.trim() !== "" || state.favOnly;
     clearFilters.hidden = !filtered;
+
+    if (window.JZSCommunity) JZSCommunity.decorateCards(grid);
   }
 
   function refreshFavUI() {
@@ -221,7 +235,12 @@
           <button class="dialog-fav ${favs.has(r.id) ? "is-fav" : ""}" type="button" data-fav="${r.id}">${favs.has(r.id) ? "♥ 已收藏" : "♡ 收藏这一杯"}</button>
           <span class="meta-pill">NO.${String(idx).padStart(2, "0")} · ${esc(r.tags.join(" / "))}</span>
         </div>
+        <div data-community></div>
       </div>`;
+
+    if (window.JZSCommunity) {
+      JZSCommunity.renderDialog("coffe:" + r.id, $("[data-community]", dialogContent));
+    }
 
     document.body.classList.add("is-locked");
     dialog.showModal();
@@ -415,6 +434,12 @@
   });
 
   /* ── Init ──────────────────────────────────── */
+
+  // 评分评论数据就绪：刷新卡片统计；若正按评分/评论排序则重排
+  window.addEventListener("jzs-stats", () => {
+    if (state.sort === "rating" || state.sort === "comments") renderGrid();
+    else if (window.JZSCommunity) JZSCommunity.decorateCards(grid);
+  });
 
   renderChips();
   renderGrid();
